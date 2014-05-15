@@ -75,14 +75,14 @@ class HotelRoom{
 	public HotelRoom(String type1, double cost1){
 		if (type1 == "basic") {
 			this.type = type1;
-			this.cost = cost1;
+			this.cost = 100;
 		}
 		else if (type1 == "medium") {
 			this.type = type1;
-			this.cost = cost1;
+			this.cost = 150;
 		} else {
 			this.type = type1;
-			this.cost = cost1;
+			this.cost = 200;
 		}
 	}
 	
