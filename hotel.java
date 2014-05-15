@@ -11,13 +11,16 @@ class hotel {
 		List hotelRooms = new ArrayList(40);
 		
 		//populate hotelRooms with random rooms.
-		HotelRoom room1 = new HotelRoom();
+		//HotelRoom room1 = new HotelRoom();
+		HotelRoom room1 = new HotelRoom("basic", 100);
 		HotelRoom room2 = new HotelRoom("medium", 150);
 		HotelRoom room3 = new HotelRoom("deluxe", 200);
+		System.out.print(room1.type);
+		System.out.println(room1.cost);
 		System.out.print(room2.type);
-		System.out.print(room2.cost);
-		System.out.println(room3.type);
-		System.out.print(room3.cost);
+		System.out.println(room2.cost);
+		System.out.print(room3.type);
+		System.out.println(room3.cost);
 	}
 }
 
@@ -63,14 +66,18 @@ class HotelRoom{
 	Based on value of type, cost will be assigned.
 	*/
 	//default constructor is basic room.
-	public HotelRoom(){
+	/*public HotelRoom(){
 		this.type = "basic";
 		this.cost = 100;
-	}
+	}//*/
 	//specific constructors will have if loop inside.
 	//possible values for type are medium and deluxe
 	public HotelRoom(String type1, double cost1){
-		if (type1 == "medium") {
+		if (type1 == "basic") {
+			this.type = type1;
+			this.cost = cost1;
+		}
+		else if (type1 == "medium") {
 			this.type = type1;
 			this.cost = cost1;
 		} else {
