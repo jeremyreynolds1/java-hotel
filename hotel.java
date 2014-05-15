@@ -5,9 +5,7 @@
 class hotel {
 	public static void main(String[] args) {
 		Guest guest1 = new Guest("Jeremy", "Reynolds");
-		//System.out.print(guest1.getFirst());
-		guest1.setFirst("Rachel");
-		System.out.print(guest1.toString());
+		System.out.print(guest1.getFirst());
 	}
 }
 
@@ -18,21 +16,12 @@ class Guest{
 		firstName = first;
 		lastName = last;
 	}
-	//get methods
+	//need to create get and set method to change later.
 	public String getFirst(){
 		return firstName;
 	}
 	public String getLast(){
 		return lastName;
 	}
-	//set methods
-	public void setFirst(String first){
-		firstName = first;
-	}
-	public void setLast(String last){
-		lastName = last;
-	}
-	public String toString(){
-		return "First Name: " + firstName + "\nLast Name: " + lastName;
-	}
+	//hello?
 }
