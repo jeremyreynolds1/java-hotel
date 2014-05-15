@@ -11,6 +11,7 @@ class hotel {
 		List hotelRooms = new ArrayList(40);
 		
 		//populate hotelRooms with random rooms.
+		HotelRoom room1 = new HotelRoom();
 		
 	}
 }
@@ -19,15 +20,26 @@ class Guest{
 	private String firstName;
 	private String lastName;
 	public Guest(String first, String last){
-		firstName = first;
-		lastName = last;
+		this.firstName = first;
+		this.lastName = last;
 	}
-	//need to create get and set method to change later.
+	//get methods
 	public String getFirst(){
 		return firstName;
 	}
 	public String getLast(){
 		return lastName;
+	}
+	//set methods
+	public void setFirst(String first){
+		this.firstName = first;
+	}
+	public void setLast(String last){
+		this.lastName = last;
+	}
+	//toString method override
+	public String toString(){
+		return this.firstName + " " + this.lastName;
 	}
 	
 }
@@ -36,17 +48,10 @@ class HotelRoom{
 	String type;
 	double cost;
 	
-	public basicRoom(){
-		type = "basic";
-		cost = 50.0;
-	}
-	public mediumRoom(){
-		type = "medium";
-		cost = 100.0;
-	}
-	public deluxeRoom(){
-		type = "deluxe";
-		cost = 150.0;
+	//default constructor is basic room.
+	public HotelRoom(){
+		this.type = "basic";
+		this.cost = 100;
 	}
 	
 }
