@@ -12,7 +12,12 @@ class hotel {
 		
 		//populate hotelRooms with random rooms.
 		HotelRoom room1 = new HotelRoom();
-		
+		HotelRoom room2 = new HotelRoom("medium", 150);
+		HotelRoom room3 = new HotelRoom("deluxe", 200);
+		System.out.print(room2.type);
+		System.out.print(room2.cost);
+		System.out.println(room3.type);
+		System.out.print(room3.cost);
 	}
 }
 
@@ -44,14 +49,34 @@ class Guest{
 	
 }
 class HotelRoom{
+	/*
+		Basic -> 100
+		Medium -> 150
+		deluxe -> 200
+	*/
 	//type of room, cost, and who is it reserved to
 	String type;
 	double cost;
 	
+	/*
+	want to refactor so each type of hotel room is in the same constructor.
+	Based on value of type, cost will be assigned.
+	*/
 	//default constructor is basic room.
 	public HotelRoom(){
 		this.type = "basic";
 		this.cost = 100;
+	}
+	//specific constructors will have if loop inside.
+	//possible values for type are medium and deluxe
+	public HotelRoom(String type1, double cost1){
+		if (type1 == "medium") {
+			this.type = type1;
+			this.cost = cost1;
+		} else {
+			this.type = type1;
+			this.cost = cost1;
+		}
 	}
 	
 }
