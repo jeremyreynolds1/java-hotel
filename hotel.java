@@ -13,19 +13,27 @@ class hotel {
 		//create while loop to add HotelRoom objects to hotelRoomsList
 		int hotelRoomCount = 0;
 		//40 rooms total from 0 - 39
-		while (hotelRoomCount < 39) {
+		while (hotelRoomCount <= 39) {
 			if (hotelRoomCount < 20) {
 				HotelRoom room = new HotelRoom("basic");
+				hotelRoomsList.add(room);
+			}
+			else if (hotelRoomCount > 20 && hotelRoomCount <= 30) {
+				HotelRoom room = new HotelRoom("medium");
+				hotelRoomsList.add(room);
+			}
+			else if (hotelRoomCount > 30) {
+				HotelRoom room = new HotelRoom("deluxe");
 				hotelRoomsList.add(room);
 			}
 			hotelRoomCount++;
 		}
 		
-		
-		//System.out.println(hotelRooms.size());
-		/*for (int i = 0; i < hotelRooms.size(); i++) {
-			System.out.println("hello");
-		}*/
+		for (int i = 0; i <= hotelRoomsList.size(); i++) {
+			//System.out.println(hotelRoomsList.get(i));
+			System.out.println(i);
+			
+		}//*/
 		
 		//populate hotelRooms with random rooms.
 		//HotelRoom room1 = new HotelRoom();
