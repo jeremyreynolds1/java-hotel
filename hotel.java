@@ -8,11 +8,28 @@ class hotel {
 		Guest guest1 = new Guest("Jeremy", "Reynolds");
 		
 		//HotelRoom objects will go here
-		List hotelRooms = new ArrayList(40);
+		ArrayList<HotelRoom> hotelRoomsList = new ArrayList<HotelRoom>();
+		
+		//create while loop to add HotelRoom objects to hotelRoomsList
+		int hotelRoomCount = 0;
+		//40 rooms total from 0 - 39
+		while (hotelRoomCount < 39) {
+			if (hotelRoomCount < 20) {
+				HotelRoom room = new HotelRoom("basic");
+				hotelRoomsList.add(room);
+			}
+			hotelRoomCount++;
+		}
+		
+		
+		//System.out.println(hotelRooms.size());
+		/*for (int i = 0; i < hotelRooms.size(); i++) {
+			System.out.println("hello");
+		}*/
 		
 		//populate hotelRooms with random rooms.
 		//HotelRoom room1 = new HotelRoom();
-		HotelRoom room1 = new HotelRoom("basic", 100);
+		/*HotelRoom room1 = new HotelRoom("basic", 100);
 		HotelRoom room2 = new HotelRoom("medium", 150);
 		HotelRoom room3 = new HotelRoom("deluxe", 200);
 		System.out.print(room1.type);
@@ -20,7 +37,7 @@ class hotel {
 		System.out.print(room2.type);
 		System.out.println(room2.cost);
 		System.out.print(room3.type);
-		System.out.println(room3.cost);
+		System.out.println(room3.cost);//*/
 	}
 }
 
@@ -72,7 +89,7 @@ class HotelRoom{
 	}//*/
 	//specific constructors will have if loop inside.
 	//possible values for type are medium and deluxe
-	public HotelRoom(String type1, double cost1){
+	public HotelRoom(String type1){
 		if (type1 == "basic") {
 			this.type = type1;
 			this.cost = 100;
